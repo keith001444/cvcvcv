@@ -1,0 +1,151 @@
+/* Base styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdfdfd;
+    color: #222;
+    transition: all 0.3s;
+}
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+header .subtitle {
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+/* Nav */
+nav {
+    background: #333;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin: 40px 0;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Tags */
+.tags span {
+    background: #eee;
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 6px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Typing animation */
+.typing {
+    font-size: 2.5em;
+    border-right: 3px solid white;
+    width: 24ch;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: auto;
+    animation: typing 3s steps(24), blink 0.7s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 24ch }
+}
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* Fade-in */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 1s;
+}
+@keyframes fadeIn {
+    to { opacity: 1 }
+}
+
+/* Scroll animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button */
+button {
+    background: #fff;
+    color: #4e54c8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+button:hover {
+    background: #f0f0f0;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #111;
+    color: #eee;
+}
+.dark-mode header {
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+}
+.dark-mode nav {
+    background: #222;
+}
+.dark-mode .card {
+    background: #1c1c1c;
+    color: #f4f4f4;
+}
+.dark-mode button {
+    background: #444;
+    color: #fff;
+}
